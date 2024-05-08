@@ -1,0 +1,427 @@
+body {
+  box-sizing: border-box;
+}
+
+.navbar {
+  color: yellow;
+  /* display: flex;
+    justify-content: space-between; */
+}
+
+.title {
+  font-size: 25px;
+  padding-left: 3%;
+}
+
+.inp input {
+  width: 75%;
+  padding: 1%;
+}
+
+.logo {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 3%;
+}
+
+.logo_btn {
+  margin-right: 2%;
+  width: 16%;
+}
+
+.logo_btn button {
+  padding: 5% 15%;
+  border-radius: 5px;
+  background: yellow;
+}
+
+.content_list ul {
+  padding: .5%;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.content_list ul li {
+  width: 8%;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  list-style-type: none;
+}
+
+.body_content {
+  position: relative;
+}
+
+.body_content .body_txt {
+  width: 100%;
+  position: absolute;
+  bottom: 30%;
+  /* left: 50%; */
+  text-align: center;
+  color: #fff;
+
+}
+
+.body_content img {
+  width: 100%;
+  /* object-fit: cover; */
+  height: 84vh;
+  filter: blur(4px);
+
+}
+
+#e-foter {
+  display: flex;
+  flex-direction: column;
+}
+
+.top_ftr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1%;
+  border-bottom: 1px solid whitesmoke;
+  padding-bottom: 1%;
+}
+
+.btm_ftr {
+  padding: 1%;
+  text-align: center;
+  font-size: 16px;
+}
+
+#e-foter li {
+  list-style-type: none;
+}
+
+.ftr {
+  text-align: center;
+}
+
+.links .anchr-lst {
+  display: flex;
+  flex-direction: column;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* css for slider */
+.slider {
+  background-color: #ededed;
+}
+
+#carouselExampleControls-3 {
+
+  padding: 0% 0% 2% 0%;
+}
+
+.card-description {
+  font-weight: 700;
+}
+
+.row {
+  aspect-ratio: 4/1;
+
+}
+
+.card_btn {
+  padding: 1% 6%;
+  border-radius: 5px;
+  background-color: yellow !important;
+}
+.hamburger{
+      
+    /* display: flex; */
+    margin-left: 90%;
+    margin-top: -10%;
+    /* justify-content: flex-end; */
+    border-radius: 8px;
+}
+
+
+/* .carousel-item {
+  margin-left: 4%;
+} */
+
+/* .card-width {
+  width: 18.66%;
+} */
+
+/* .card-wrapper {
+    height: 356px;
+  } */
+/* .card-wrapper .card{
+    height: 371px;
+  } */
+
+/* new */
+/* .slider{
+    height: 40rem !important;
+  } */
+.card .card-body h3 {
+  font-size: 18px;
+  font-weight: bold !important;
+}
+
+/* .carousel-inner {
+  height: 37rem;
+} */
+
+.cart {
+  padding-left: 3%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 !important;
+  padding-bottom: 5% !important;
+}
+
+.card .card-body .image img {
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.rounded-circle {
+  border-radius: 1% !important;
+}
+
+/* .card{
+    height: 31rem;
+  } */
+
+/* Contact Us  */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.contact-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 81%;
+  height: auto;
+  object-fit: cover;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #d2d20c;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #c0c82e;
+}
+
+.sumbit {
+  background: #d2d20c !important;
+  color: black;
+  font-weight: bold;
+}
+
+.logo .cart a i {
+  width: 100%;
+  font-size: 24px;
+  color: yellow;
+}
+
+.searchSubmit {
+  background: yellow;
+  border-radius: inherit;
+  border-radius: 0px 10px 0px 0px;
+  font-weight: bold;
+  color: black;
+}
+
+.searchbar input {
+  border-radius: inherit;
+  border-radius: 0px 0px 0px 10px;
+
+}
+
+.navbar {
+  background-color: black !important;
+}
+
+.head a img {
+  width: 44%;
+  display: flex;
+  position: relative;
+  mix-blend-mode: hard-light;
+}
+
+.form-control {
+  margin: 0%;
+}
+
+ul a {
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  margin-left: 5%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  inset: 3px auto auto 41%;
+  margin: 0px;
+  transform: translate3d(0px, 87.3333px, 0px);
+  width: 20% !important;
+}
+
+.hidebtn {
+  border-color: white;
+  position: relative;
+  right: 2%;
+}
+
+@media (min-width: 358px) and (max-width: 991px) {
+  .searchbar {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0% 10% 0% 10%;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo_btn {
+    margin-right: 0%;
+    margin-bottom: 1%;
+    width: 16%;
+  }
+
+  .cart {
+    padding-left: 0%;
+  }
+  .head a img {
+    width: 81%;
+  }
+}
+
+@media (min-width: 427px) and (max-width: 582px){
+  .body_txt {
+    position: absolute !important;
+    bottom: 15% !important;
+  }
+
+  .body_content .body_txt h1 {
+    font-size: 54px !important;
+  }
+
+  .body_content .body_txt span {
+    font-size: 16px !important;
+  }
+
+  ul a {
+    font-size: 18px !important;
+  }
+   .top_ftr{
+    flex-direction: column;
+   }
+}
+@media (min-width: 577px) and (max-width: 999px) {
+  .card-wrapper{
+    width: 95% !important;
+    position: relative;
+    right: -10%;
+  }
+  .top_ftr{
+    flex-direction: column;
+   }
+}
+
+/* @media (max-width: 576px) {
+  #carouselExampleControls-3 .carousel-inner .carousel-item .row .card-width {
+    flex-basis: 75%;
+    margin-bottom: 40%;
+    position: relative;
+    left: 9%;
+  }
+} */
+
+
+
+.card-wrapper{
+  width: 100%;
+}
+.g-4{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  
+}
+
+.carousel-control-prev-icon{
+  height: 35px;
+  width: 35px;
+  padding: 10%;
+}
+.carousel-control-next-icon{
+  height: 35px;
+  width: 35px;
+  padding: 10%;
+}
+
+

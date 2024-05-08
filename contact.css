@@ -1,0 +1,79 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.contactus header {
+    background-color: #ffffff;
+    color: #020101;
+    padding: 10px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.contact-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.contact-image img {
+    width: 81%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #d2d20c;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #c0c82e;
+}
+
+.sumbit {
+    background: #d2d20c !important;
+    color: black;
+    font-weight: bold;
+}
+.contactus{
+    background-color: #fff !important;
+}

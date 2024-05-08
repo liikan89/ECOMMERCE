@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Order Summary</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <style>
+        .items {
+            max-width: 500px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .dltBtn {
+            height: 36px;
+            display: flex;
+            align-items: center;
+            background-color: #d2d20c;
+        }
+
+        svg {
+            color: black;
+        }
+
+        .quantity-input {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .quantity-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .quantity-box {
+            border: 1px solid #ced4da;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 0 10px;
+            width: 85px;
+            text-align: center;
+        }
+
+        .main-Cart {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .main-dlt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-dlt h5 {
+            margin-bottom: 20px;
+        }
+        .main-dlt h6{
+            margin-bottom: 9%;
+        }
+
+        .quantity-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            background-color: #d2d20c;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3%;
+        }
+        .total{
+            font-weight: bold;
+        }
+        .main-card .card-header{
+            display: flex;
+            justify-content: center;
+        }
+        .sec-body{
+            background: none;
+        }
+        .sec-card .headers{
+            display: flex;
+            justify-content: center;
+        }
+        .checkout{
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .checkout button{
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="card  main-card col-md-6 p-0" id="cartItem">
+                <h3 class="card-header">Itams in cart</h3>
+                <div class="card-body">
+                    <div class="col-md main-Cart">
+                        <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="">
+                        <div class="main-dlt">
+                            <h5>Superman dress</h5>
+                            <h6 class="total-amount" id="totalAmount">$15</h6>
+                            <button type="button" class="btn btn-warning dltBtn" onclick="deleteItem('cartItem')"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                                </svg></button>
+                        </div>
+                        <div class="quantity-input">
+                            <button type="button" class="btn btn-warning quantity-btn"
+                                onclick="updateQuantity(-1)">-</button>
+                            <input type="text" class="quantity-input quantity-box" value="1" id="quantity"
+                                onchange="updateTotalAmount()">
+                            <button type="button" class="btn btn-warning quantity-btn"
+                                onclick="updateQuantity(1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card sec-card col-md-4 p-0">
+                <h4 class="card-header headers">Summary</h4>
+                <div class="card-body">
+                    <div class="card-header sec-body">
+                        <div class="summary-row">
+                            <span class="summary-label">Cost:</span>
+                            <span id="costAmount">$15</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Shipping Charge (20%):</span>
+                            <span id="shippingCharge">$3.00</span>
+                        </div>
+                    </div>
+                    <div class="summary-row total">
+                        <span class="summary-label">Total:</span>
+                        <span id="totalWithShipping">$18.00</span>
+                    </div>
+                    <div class="checkout"> <button type="button" class="btn btn-warning dltBtn">Checkout</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+
+    <script>
+        function updateQuantity(change) {
+            var quantityInput = document.getElementById('quantity');
+            var currentQuantity = parseInt(quantityInput.value);
+
+            // Ensure the quantity is a positive integer and greater than 1 if decreasing
+            if (!isNaN(currentQuantity) && (currentQuantity > 1 || change > 0)) {
+                var newQuantity = currentQuantity + change;
+                quantityInput.value = newQuantity;
+
+                // Update the total amount based on the new quantity
+                updateTotalAmount();
+
+                // Update the summary values
+                updateSummary();
+            }
+        }
+
+        function updateTotalAmount() {
+            var quantityInput = document.getElementById('quantity');
+            var totalAmountElement = document.getElementById('totalAmount');
+
+            var currentQuantity = parseInt(quantityInput.value);
+            var unitPrice = 15; // Replace with your actual unit price
+
+            // Ensure the quantity is at least 1
+            if (!isNaN(currentQuantity) && currentQuantity >= 1) {
+                // Calculate the new total amount
+                var newTotalAmount = currentQuantity * unitPrice;
+
+                // Update the total amount displayed on the page
+                totalAmountElement.textContent = '$' + newTotalAmount.toFixed(2);
+            } else {
+                // Reset the quantity to 1 if it goes below 1
+                quantityInput.value = 1;
+                totalAmountElement.textContent = '$' + unitPrice.toFixed(2);
+            }
+        }
+
+        function deleteItem(itemId) {
+            var item = document.getElementById(itemId);
+            item.parentNode.removeChild(item);
+
+            // Update the summary values after item deletion
+            updateSummary();
+        }
+
+
+
+        function updateSummary() {
+            var totalAmount = parseFloat(document.getElementById('totalAmount').textContent.slice(1));
+            var shippingChargePercentage = 0.20;
+            var shippingCharge = totalAmount * shippingChargePercentage;
+            var totalWithShipping = totalAmount + shippingCharge;
+
+            document.getElementById('costAmount').textContent = '$' + totalAmount.toFixed(2);
+            document.getElementById('shippingCharge').textContent = '$' + shippingCharge.toFixed(2);
+            document.getElementById('totalWithShipping').textContent = '$' + totalWithShipping.toFixed(2);
+        }
+
+    </script>
+
+</body>
+
+</html>
